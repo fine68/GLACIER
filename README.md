@@ -171,9 +171,3 @@ This article is the extended journal version of our conference paper **Hyperload
 ```
 
 ---
-
-## 🙏 Acknowledgements
-
-This work was supported by the **National Key R&D Program of China (2023YFE0108600)**, the **National Natural Science Foundation of China (51806190)**, and the **Zhejiang Province "Leading Goose" & "Pioneer" R&D Program (2024C03117)**.
-
-
