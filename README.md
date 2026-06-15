@@ -26,6 +26,11 @@ GLACIER is built on an **energy-domain specialized LLM** backbone and integrates
 We also release **DCData**, the first public benchmark dataset for this task.
 
 <p align="center">
+  <img src="assets/GA.png" width="850"><br>
+  <em>Figure 2. Training workflow and architecture of GLACIER (A: energy-domain LLM pretraining · B: data collection & training · C: framework overview · D: EGIA mechanism).</em>
+</p>
+
+<p align="center">
   <img src="assets/figure2_framework.png" width="850"><br>
   <em>Figure 2. Training workflow and architecture of GLACIER (A: energy-domain LLM pretraining · B: data collection & training · C: framework overview · D: EGIA mechanism).</em>
 </p>
