@@ -235,9 +235,7 @@ class Model(nn.Module):
         x_enc /= stdev
 
         B, T, N = x_enc.size()
-        # NOTE: this permute+reshape pair is a legacy view kept to reproduce the
-        # released weights. It is reversed before the series embedding below, so
-        # only the descriptive statistics in the prompt are computed on this view.
+
         x_enc = x_enc.permute(0, 2, 1).contiguous().reshape(B, T, N)
 
         # --- (2) build the CATS text template from statistics + segment trends ---
@@ -261,10 +259,6 @@ class Model(nn.Module):
                 segment_trends.append(feature_trends)
             trends.append(segment_trends)
 
-        # NOTE: the "Input statistics ..." block is intentionally repeated three
-        # times — this is part of the prompt the released weights were trained
-        # with; the repetition changes the tokenized length and must be kept to
-        # reproduce reported results. Do not deduplicate without retraining.
         prompt = []
         for b in range(x_enc.shape[0]):
             min_values_str = ', '.join([f"{val:.2f}" for val in min_values[b].tolist()])
